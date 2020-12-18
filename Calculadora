@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Clases
+{
+    class Program
+    {
+        static decimal suma(decimal a, decimal b)
+        {
+            decimal suma = a + b;
+            return suma;
+        }
+
+        static decimal resta(decimal a, decimal b)
+        {
+            decimal resta = a - b;
+            return resta;
+        }
+
+        static decimal multiplicacion(decimal a, decimal b)
+        {
+            decimal multiplicacion = a * b;
+            return multiplicacion;
+        }
+
+        static decimal division(decimal a, decimal b)
+        {
+            decimal division = a / b;
+            return division;
+        }
+
+        static void Main(string[] args)
+        {
+            decimal a, b;
+            Console.Write("\n" + "Introduce el primer número: ");
+            a = decimal.Parse(Console.ReadLine());
+            Console.Write("\n" + "Introduce el segundo número: ");
+            b = decimal.Parse(Console.ReadLine());
+
+            Console.Write("\n" + "Seleccione una opción: " + "\n" + "\n");
+            Console.Write("\n" + "     1º) Suma" + "\n" + "     2º) Resta" + "\n" + "     3º) Multiplicación" + "\n" + "     4º) División" + "\n" + "\n");
+
+            switch (Console.Read())
+
+            {
+                case '1':
+                    Console.Write("\n" + "    El resultado es = " + suma(a, b));
+                    break;
+
+                case '2':
+                    Console.Write("\n" + "    El resultado es = " + resta(a, b));
+                    break;
+
+                case '3':
+                    Console.Write("\n" + "    El resultado es = " + multiplicacion(a, b));
+                    break;
+
+                case '4':
+                    Console.Write("\n" + "    El resultado es = " + division(a, b));
+                    break;
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
